@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "teacher_socials",
+  "info": {
+    "singularName": "teacher-social",
+    "pluralName": "teacher-socials",
+    "displayName": "Teacher Social",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "platform": {
+      "type": "enumeration",
+      "enum": [
+        "email",
+        "facebook",
+        "instagram",
+        "twitter",
+        "youtube",
+        "github"
+      ],
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "teacher": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::teacher.teacher"
+    }
+  }
+}
